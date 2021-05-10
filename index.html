@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            BRIAN's_personal_introduction_with_simple_html
+        </title>
+        <link rel="icon" href="logo_icon.png" type="image/x-icon">
+    </head>
+    
+    <body>
+        <style>
+            a:link {color: yellowgreen;}
+            a:visited {color: darkkhaki;}
+            a:hover {color: red;}
+            a:active {color: plum;}
+            p {
+            border: 2px solid black;
+            padding: 20px;
+            }       
+            </style>
+
+        <script type="text/javascript"> 
+            function display_c(){
+            var refresh=1000;
+            mytime=setTimeout('display_ct()',refresh)
+            }
+            
+            function display_ct() {
+            var x = new Date()
+            var x1 = x.getMonth()+1 + "-" + x.getDate() + "-" + x.getFullYear() + " "
+            
+            var hour=x.getHours();
+            var minute=x.getMinutes();
+            var second=x.getSeconds();
+            if(hour < 10) {hour = '0'+hour;}
+            if(minute < 10) {minute = '0'+minute;}
+            if(second < 10) {second = '0'+second;}
+
+            var x2 = x1 + hour + ':' + minute + ':' + second 
+            document.getElementById('ct').innerHTML = x2;
+            display_c();
+            }            
+        </script>
+        <body onload=display_ct();>
+        <span id='ct' ></span>
+
+        <h1>
+            Shou-Yu Wang
+        </h1>
+        <img src="puipui.jpg" alt="Just a cute pic." width="640" height="360">
+
+        <audio controls autoplay loop>
+            <source src="PUIPUImusic.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>
+            High School & College
+        </h2>
+        <p>
+            My high school was
+            <a href=http://www.wghs.tp.edu.tw/1wghs/index.htm>WEGO High School.</a>
+            And now I study
+            <a href=https://web.ee.ntu.edu.tw>Electronic Engineering</a>
+            in NTU.
+        </p>
+
+        <h2>
+            Hobbies
+        </h2>
+        <p>
+            I like to play video games such as
+            <a href="https://supercell.com/en/games/brawlstars/">Brawl Stars</a>
+            on my phones or sometimes watching some
+            <a href="https://www.netflix.com/tw/">Netflix</a>
+            chilling at home. Other than that, I'm deeply involved in House dance recently, which you can definitely check out what is it
+            <a href="https://hiphop4thlife.wordpress.com/2018/12/07/house-dance-%E4%BB%8B%E7%B4%B9/">here.</a>
+        </p>
+        
+        
+
+    </body>
+</html>
